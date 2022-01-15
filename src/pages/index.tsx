@@ -5,9 +5,7 @@ import { Layout } from '../components/layout';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <h1 className={styles.title}>
-        Welcome to my Portfolio
-      </h1>
+      <h1 className={styles.title}>Welcome to my Portfolio</h1>
     </Layout>
   );
 };
