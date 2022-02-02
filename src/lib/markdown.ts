@@ -4,10 +4,15 @@ import micromark from 'micromark';
 
 const contentDirectory = join(process.cwd(), 'src/content');
 
-export const markdownToHtml = (markdown: string): string => micromark(markdown);
+type Converter = (content: string) => string
+export const markdownToHtml: Converter = (markdown: string): string => micromark(markdown);
 
-export const readMarkdownContent = (name: string): string => {
+export const readMarkdownContent = (name: string, convert: Converter = markdownToHtml): string => {
+  return convert(readFileContent(name));
+};
+
+const readFileContent = function(name: string) {
   const fullPath = join(contentDirectory, `${name}.md`);
-  return markdownToHtml(fs.readFileSync(fullPath, 'utf-8'));
+  return fs.readFileSync(fullPath, 'utf-8');
 };
 

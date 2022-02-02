@@ -26,9 +26,8 @@ describe('markdown', () => {
   });
   describe('readMarkdown', () => {
     it('should read the file content for a valid path', () => {
-      const about = readMarkdownContent('about')
-      expect(about).toStartWith('## About me')
-      expect(about).toInclude('Hi, I’m Marc')
+      const about = readMarkdownContent('about');
+      expect(about).toStartWith('<p>Hi, I’m Marc');
     });
   });
 
