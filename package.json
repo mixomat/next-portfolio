@@ -29,5 +29,8 @@
     "jest-junit": "^13.0.0",
     "prettier": "^2.6.1",
     "typescript": "^4.5.5"
+  },
+  "jest-junit": {
+    "outputDirectory": "reports"
   }
 }

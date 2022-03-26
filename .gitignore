@@ -39,4 +39,4 @@ yarn-error.log*
 # idea
 .idea
 
-junit.xml
+reports
