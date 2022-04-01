@@ -29,6 +29,6 @@ jobs:
 
       - name: Publish Test Report
         uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
+        if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           files: "**/reports/*.xml"
