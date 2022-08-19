@@ -32,5 +32,8 @@
   },
   "jest-junit": {
     "outputDirectory": "reports"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
